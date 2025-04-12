@@ -48,3 +48,4 @@ def convert_vcf(input_vcf, output_file):
             out.write(line + '\n')
         out.write('#' + '\t'.join(df.columns) + '\n')
         df.to_csv(out, sep='\t', index=False, header=False)
+convert_vcf("merged.vcf", "model_input_ready.tsv")
